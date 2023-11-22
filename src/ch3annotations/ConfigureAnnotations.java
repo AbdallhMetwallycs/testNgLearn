@@ -4,7 +4,7 @@ import org.testng.annotations.*;
 
 public class ConfigureAnnotations {
     @BeforeSuite
-    void beforeSuite(){
+    public void beforeSuite(){
         System.out.println("Chrome- set up System property");
     }
     @BeforeTest
@@ -12,35 +12,35 @@ public class ConfigureAnnotations {
         System.out.println("Open Chrome");
     }
     @BeforeClass
-    void beforeClass(){
+    public void beforeClass(){
         System.out.println("Open Test Application");
     }
     @BeforeMethod
-    void beforeMethod(){
+    public void beforeMethod(){
         System.out.println("Sign in ");
     }
     @AfterMethod
-    void afterMethod(){
+    public void afterMethod(){
         System.out.println("Sign out");
     }
     @AfterClass
-    void afterClass(){
+    public void afterClass(){
         System.out.println("Close Test Application");
     }
     @AfterTest
-    void afterTest(){
+    public void afterTest(){
         System.out.println("Close chrome");
     }
     @AfterSuite
-    void afterSuite(){
+    public void afterSuite(){
         System.out.println("Clean up all cookies");
     }
     @Test
-    void searchCustomer(){
+    public void searchCustomer(){
         System.out.println("Search For Customer");
     }
     @Test
-    void searchProduct(){
+    public void searchProduct(){
         System.out.println(" Search For Product");
     }
 }
